@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Demo 2</title>
+    </head>
+    <body>
+        {% if not result %}
+        <form action="/add" method="post">
+            {% csrf_token %}
+            A: <input type="number" name="a" id="a"><br>
+            B: <input type="number" name="b" id="b"><br>
+            <input type="submit" value="Submit">
+        </form>
+        {% else %}
+        Result: {{ result }}<br>
+        <a href="/"><button type="button">Go to Home</button></a>
+        {% endif %}
+    </body>
+</html>
